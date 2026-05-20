@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/auth_screen.dart';
 import 'screens/dashboard_screen.dart';
 import 'screens/transactions_screen.dart';
@@ -86,6 +87,24 @@ class MainScaffold extends StatelessWidget {
 final router = GoRouter(
   navigatorKey: _rootNavigatorKey,
   initialLocation: '/auth',
+  redirect: (context, state) async {
+    final prefs = await SharedPreferences.getInstance();
+    final token = prefs.getString('jwt_token');
+    
+    final isAuthRoute = state.uri.path == '/auth';
+    
+    // If no token exists and user is not on auth screen, redirect to auth
+    if (token == null && !isAuthRoute) {
+      return '/auth';
+    }
+    
+    // If user has a token and is on auth screen, go to dashboard
+    if (token != null && isAuthRoute) {
+      return '/dashboard';
+    }
+    
+    return null;
+  },
   routes: [
     GoRoute(
       path: '/auth',

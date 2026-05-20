@@ -117,7 +117,7 @@ class DashboardScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            '\$${data.totalBalance.toStringAsFixed(2)}',
+            '₹${data.totalBalance.toStringAsFixed(2)}',
             style: const TextStyle(
               color: Colors.white,
               fontSize: 36,
@@ -131,13 +131,13 @@ class DashboardScreen extends ConsumerWidget {
             children: [
               _buildIncomeExpenseStat(
                 label: 'Income',
-                amount: '+\$${data.monthlyIncome.toStringAsFixed(2)}',
+                amount: '+₹${data.monthlyIncome.toStringAsFixed(2)}',
                 icon: Icons.arrow_downward,
                 color: AppTheme.accent,
               ),
               _buildIncomeExpenseStat(
                 label: 'Expense',
-                amount: '-\$${data.monthlyExpense.toStringAsFixed(2)}',
+                amount: '-₹${data.monthlyExpense.toStringAsFixed(2)}',
                 icon: Icons.arrow_upward,
                 color: Colors.redAccent,
               ),
@@ -251,10 +251,10 @@ class DashboardScreen extends ConsumerWidget {
       return const Center(child: Text("No recent transactions"));
     }
     final transactions = [
-      {'title': 'Starbucks Coffee', 'date': 'Today, 10:30 AM', 'amount': '-\$4.50', 'icon': Icons.coffee},
-      {'title': 'Salary Deposit', 'date': 'Yesterday', 'amount': '+\$3,200.00', 'icon': Icons.business_center, 'isIncome': true},
-      {'title': 'Apple Music', 'date': 'May 12, 2026', 'amount': '-\$9.99', 'icon': Icons.music_note},
-      {'title': 'Uber Ride', 'date': 'May 11, 2026', 'amount': '-\$24.50', 'icon': Icons.directions_car},
+      {'title': 'Starbucks Coffee', 'date': 'Today, 10:30 AM', 'amount': '-₹4.50', 'icon': Icons.coffee},
+      {'title': 'Salary Deposit', 'date': 'Yesterday', 'amount': '+₹3,200.00', 'icon': Icons.business_center, 'isIncome': true},
+      {'title': 'Apple Music', 'date': 'May 12, 2026', 'amount': '-₹9.99', 'icon': Icons.music_note},
+      {'title': 'Uber Ride', 'date': 'May 11, 2026', 'amount': '-₹24.50', 'icon': Icons.directions_car},
     ];
 
     return Column(

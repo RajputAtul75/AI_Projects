@@ -21,15 +21,15 @@ class TransactionsScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         children: [
           _buildMonthSection('May 2026', [
-            _TransactionItem(title: 'Apple Music', subtitle: 'Subscriptions', amount: '-\$9.99', icon: Icons.music_note, color: Colors.blue),
-            _TransactionItem(title: 'Uber Ride', subtitle: 'Transport', amount: '-\$24.50', icon: Icons.directions_car, color: Colors.orange),
-            _TransactionItem(title: 'Salary', subtitle: 'Income', amount: '+\$3,200.00', icon: Icons.business_center, color: AppTheme.accent, isIncome: true),
+            _TransactionItem(title: 'Apple Music', subtitle: 'Subscriptions', amount: '-₹9.99', icon: Icons.music_note, color: Colors.blue),
+            _TransactionItem(title: 'Uber Ride', subtitle: 'Transport', amount: '-₹24.50', icon: Icons.directions_car, color: Colors.orange),
+            _TransactionItem(title: 'Salary', subtitle: 'Income', amount: '+₹3,200.00', icon: Icons.business_center, color: AppTheme.accent, isIncome: true),
           ]),
           const SizedBox(height: 24),
           _buildMonthSection('April 2026', [
-            _TransactionItem(title: 'Starbucks', subtitle: 'Food & Dining', amount: '-\$14.50', icon: Icons.coffee, color: Colors.brown),
-            _TransactionItem(title: 'Amazon Web Services', subtitle: 'Work', amount: '-\$120.00', icon: Icons.cloud, color: Colors.amber),
-            _TransactionItem(title: 'Gym Membership', subtitle: 'Health', amount: '-\$50.00', icon: Icons.fitness_center, color: Colors.purple),
+            _TransactionItem(title: 'Starbucks', subtitle: 'Food & Dining', amount: '-₹14.50', icon: Icons.coffee, color: Colors.brown),
+            _TransactionItem(title: 'Amazon Web Services', subtitle: 'Work', amount: '-₹120.00', icon: Icons.cloud, color: Colors.amber),
+            _TransactionItem(title: 'Gym Membership', subtitle: 'Health', amount: '-₹50.00', icon: Icons.fitness_center, color: Colors.purple),
           ]),
         ],
       ),

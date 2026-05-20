@@ -113,7 +113,7 @@ class GoalsScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '\$${current.toStringAsFixed(0)}',
+                '₹${current.toStringAsFixed(0)}',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
@@ -121,7 +121,7 @@ class GoalsScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                'Target: \$${target.toStringAsFixed(0)}',
+                'Target: ₹${target.toStringAsFixed(0)}',
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,

@@ -1,0 +1,34 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# Flutter/Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+flutter_*.png
+*.log
+
+# Mac
+.DS_Store
+
+# Celery
+celerybeat-schedule
+celerybeat.pid

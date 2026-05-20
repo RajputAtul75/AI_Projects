@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/foundation.dart';
+import '../router.dart';
 
 class ApiClient {
   static String get _baseUrl {
@@ -26,6 +27,16 @@ class ApiClient {
           options.headers['Authorization'] = 'Bearer $token';
         }
         return handler.next(options);
+      },
+      onError: (DioException e, handler) async {
+        if (e.response?.statusCode == 401) {
+          // Token is invalid or expired
+          final prefs = await SharedPreferences.getInstance();
+          await prefs.remove('jwt_token');
+          // Navigate back to auth
+          router.go('/auth');
+        }
+        return handler.next(e);
       },
     ),
   );
